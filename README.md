@@ -198,16 +198,20 @@ nano scripts/setup-alb.sh   # or setup-asg.sh
 
 # 3b. — OR — Deploy ASG + ALB
 ./scripts/setup-asg.sh
-```
 
-### Script reference
+---
 
-| Script | Purpose |
-|---|---|
-| `scripts/user-data.sh` | EC2 bootstrap — installs Apache and creates the hostname page |
-| `scripts/setup-alb.sh` | Launches 2 instances, Target Group, ALB, and HTTP listener |
-| `scripts/setup-asg.sh` | Creates Launch Template, Target Group, ALB, and ASG |
-| `scripts/cleanup-alb.sh` | Removes all resources created by `setup-alb.sh` |
+## Documentation & Scripts
+
+Additional documentation and small helper scripts live in the `docs/` and `scripts/` folders respectively. See:
+
+ - [docs/USAGE.md](docs/USAGE.md) — how to run the included scripts.
+ - [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) — contribution workflow.
+ - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — repository layout and goals.
+ 
+ PowerShell scripts for Windows are in `scripts/*.ps1`; Bash helpers are in `scripts/*.sh`.
+ 
+ Replace placeholder commands inside the scripts with your real build, run, and test steps.
 | `scripts/cleanup-asg.sh` | Removes all resources created by `setup-asg.sh` |
 
 > **Tip:** Each setup script saves resource ARNs/IDs to a `.env` file (e.g., `.alb-resources.env`) so the corresponding cleanup script can find and delete exactly what was created.
