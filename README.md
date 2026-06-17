@@ -1,4 +1,3 @@
-# ASG-LB-Project1
 # AWS Load Balancer & Auto Scaling Group — Hands-On Project
 
 A practical walkthrough and automation scripts for setting up an **Application Load Balancer (ALB)** with two EC2 web servers, and a separate setup for an **Auto Scaling Group (ASG)** integrated with an ALB — all on AWS using Amazon Linux 2.
